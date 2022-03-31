@@ -13,7 +13,9 @@ public class Projectile : MonoBehaviour
 
 
             // destroys the collided gameobject in 1 sec.
-            Destroy(collision.gameObject, 1);
+            // Destroy(collision.gameObject, 1);
+
+            collision.gameObject.GetComponent<Target>().DestroyTarget();
             // destroys the collider gameobject itself.
             Destroy(this.gameObject);
 
