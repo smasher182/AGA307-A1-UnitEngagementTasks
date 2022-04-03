@@ -44,7 +44,19 @@ public class Target : MonoBehaviour
 
     }
 
-void SetUp()
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // gets a random new size with sizes ranging from 0.2f to 2.0f in all axes.
+            Vector3 newSize = new Vector3(Random.Range(0.5f, 2.0f), Random.Range(0.5f, 2.0f), Random.Range(0.5f, 2.0f));
+            // changes the scale to new size relative to the object space.
+            transform.localScale = newSize;
+        }
+
+    }
+
+    void SetUp()
     {
         switch (targetSize)
         {
