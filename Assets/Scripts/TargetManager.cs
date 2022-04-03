@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TargetSize { SMALL, MEDIUM, LARGE }
+
 public class TargetManager : MonoBehaviour
 {
     // reference to array of spawn points in the scene. 

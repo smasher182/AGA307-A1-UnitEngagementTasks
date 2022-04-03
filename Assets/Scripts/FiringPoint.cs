@@ -17,10 +17,9 @@ public class FiringPoint : MonoBehaviour
 
     private void Start()
     {
-
         // initializes the first weapon in the array.
         ChangeWeapon(0);
-
+        
     }
 
     void Update()
@@ -59,6 +58,39 @@ public class FiringPoint : MonoBehaviour
             Debug.Log("Weapon selected is " + weapons[2].name);
         }
 
+        /*if (Input.GetButtonDown("Fire1"))
+        {
+            if ((weapons[0] == true))
+            {
+                FireProjectile(0);
+            }
+
+            if ((weapons[1] == true))
+            {
+                FireProjectile(1);
+            }
+            if ((weapons[2] == true))
+            {
+                FireProjectile(2);
+            }
+        }
+        */
+
+        if ((weapons[0] == true) && Input.GetButtonDown("Fire1"))
+        {
+            FireProjectile(0);
+        }
+
+       /* if ((weapons[1] == true) && Input.GetButtonDown("Fire1"))
+        {
+            FireProjectile(1);
+        }
+
+        if((weapons[2] == true) && Input.GetButtonDown("Fire1"))
+        {
+            FireProjectile(2);
+        }
+       */
     }
     void ChangeWeapon(int _weapon)
     {
@@ -81,6 +113,8 @@ public class FiringPoint : MonoBehaviour
         projectileInstance.GetComponent<Rigidbody>().AddForce(transform.forward * projectileSpeed);
         // destroys each projectile instance after 3 seconds.
         Destroy(projectileInstance, 3);
-    }
 
+        
+
+    }
 }

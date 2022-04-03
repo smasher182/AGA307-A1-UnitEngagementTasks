@@ -651,6 +651,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1473229988}
     m_Modifications:
+    - target: {fileID: -5139263608053907838, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 2055699805}
     - target: {fileID: 8162780214551408333, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -3950,6 +3954,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1473229988}
     m_Modifications:
+    - target: {fileID: -5139263608053907838, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 2074019084}
     - target: {fileID: 8162780214551408333, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -8081,6 +8089,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1473229988}
     m_Modifications:
+    - target: {fileID: -5139263608053907838, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 995054181}
     - target: {fileID: 8162780214551408333, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -10902,6 +10914,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0000005, y: 0.36058262, z: 2.0000005}
   m_Center: {x: 1, y: 0.18029131, z: -1.0000021}
+--- !u!1 &995054181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8162780214551408369, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
+  m_PrefabInstance: {fileID: 511396346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &999258203
 GameObject:
   m_ObjectHideFlags: 0
@@ -15103,7 +15120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0235c9bcbce67f143b03a07d51b3559d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: []
+  projectilePrefab:
+  - {fileID: 2763647000064529286, guid: 71d7c376e9e7f8343a65e3891852fc3a, type: 3}
+  - {fileID: 2763647000064529286, guid: 97ac44a2c98bf35449bbe9f78e62beff, type: 3}
+  - {fileID: 2763647000064529286, guid: f1510d80fd37fb24ea398214638c7155, type: 3}
   projectileSpeed: 2000
   firingPoint: {fileID: 1269459571}
   weapons:
@@ -19736,6 +19756,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1473229988}
     m_Modifications:
+    - target: {fileID: -5139263608053907838, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 2074019084}
     - target: {fileID: 8162780214551408333, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -29988,6 +30012,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2055699805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8162780214551408369, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
+  m_PrefabInstance: {fileID: 252898615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2072827229
 GameObject:
   m_ObjectHideFlags: 0
@@ -36181,3 +36210,8 @@ Transform:
   m_Father: {fileID: 1473229988}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &2074019084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8162780214551408369, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
+  m_PrefabInstance: {fileID: 1695684759}
+  m_PrefabAsset: {fileID: 0}
