@@ -8,8 +8,7 @@ public class TriggerPad : MonoBehaviour
     public GameObject sphere;
     // reference to original scale of sphere.
     Vector3 startScale;
-    // reference to original color of sphere.
-    Color originalColor;
+    
 
     private void Start()
     {

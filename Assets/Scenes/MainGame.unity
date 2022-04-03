@@ -10273,6 +10273,7 @@ GameObject:
   - component: {fileID: 979468834}
   - component: {fileID: 979468833}
   - component: {fileID: 979468832}
+  - component: {fileID: 979468835}
   - component: {fileID: 979468831}
   m_Layer: 0
   m_Name: TriggerPad
@@ -10295,20 +10296,22 @@ Transform:
   m_Father: {fileID: 1240605160}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &979468831
-MeshCollider:
+--- !u!114 &979468831
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979468829}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1480918753}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a56c2c0e5b71842ad2dcfbc366e8eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphere: {fileID: 1868780595}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!33 &979468832
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -10574,6 +10577,19 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!65 &979468835
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979468829}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0000005, y: 0.36058262, z: 2.0000005}
+  m_Center: {x: 1, y: 0.18029131, z: -1.0000021}
 --- !u!1 &1046071753
 GameObject:
   m_ObjectHideFlags: 0
@@ -15104,7 +15120,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16638
+  m_Name: pb_Mesh16654
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20091,7 +20107,7 @@ GameObject:
   - component: {fileID: 1868780599}
   - component: {fileID: 1868780598}
   - component: {fileID: 1868780597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
