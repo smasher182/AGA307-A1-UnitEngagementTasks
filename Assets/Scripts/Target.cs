@@ -17,7 +17,11 @@ public class Target : MonoBehaviour
     public GameObject target;
     // reference to basic scale of objects in the scene.
     float scaleFactor = 1;
+
+    // reference to max distance the target can move.
+    float moveDistance = 2000;
    
+
 
 
 
@@ -27,6 +31,8 @@ public class Target : MonoBehaviour
         SetUp();
         // finds the TargetManger script.
         _TM = FindObjectOfType<TargetManager>();
+
+        StartCoroutine(Move());
 
     }
 
@@ -56,6 +62,23 @@ public class Target : MonoBehaviour
 
         }
 
+    }
+
+    IEnumerator Move()
+    {
+        // loops from 0 until the movedistance.
+        for (int i = 0; i < moveDistance; i++)
+        {
+            // moves the object in forward direcrtion.
+            transform.Translate(Vector3.forward * Time.deltaTime);
+            yield return null;
+
+        }
+        // moves the object in the opposite direction.
+        transform.Rotate(Vector3.up * 180);
+        // waits for 1 sec after the coroutine is run.
+        yield return new WaitForSeconds(1);
+        StartCoroutine(Move());
     }
 
     public void DestroyTarget()
