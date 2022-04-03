@@ -20,6 +20,8 @@ public class Target : MonoBehaviour
 
     // reference to max distance the target can move.
     float moveDistance = 2000;
+    // reference to basic speed of targets.
+    float baseSpeed = 2f;
     // reference to current speed of target.
     public float mySpeed = 4f;
 
@@ -47,23 +49,39 @@ void SetUp()
         switch (targetSize)
         {
             case TargetSize.SMALL:
+                // changes material color to red.
+                GetComponent<Renderer>().material.color = Color.red;
                 // decreases object scale by half at the start.
                 transform.localScale = Vector3.one * scaleFactor / 1.4f;
+                // increases speed by 10.
+                mySpeed = baseSpeed * 10f;
+
                 break;
 
-            case TargetSize.MEDIUM:               
+            case TargetSize.MEDIUM:
+                // changes material color to red.
+                GetComponent<Renderer>().material.color = Color.yellow;
                 // keeps the same scale.
-                transform.localScale = Vector3.one * scaleFactor * 1f;               
+                transform.localScale = Vector3.one * scaleFactor * 1f;
+                // keeps the same speed.
+                mySpeed = baseSpeed * 1f;
+
                 break;
 
-            case TargetSize.LARGE:               
+            case TargetSize.LARGE:
+                // changes material color to red.
+                GetComponent<Renderer>().material.color = Color.green;
                 // increases object scale by twice the initial size at the start.
-                transform.localScale = Vector3.one * scaleFactor * 1.4f;               
+                transform.localScale = Vector3.one * scaleFactor * 1.4f;
+                // decreases the speed by 5.
+                mySpeed = baseSpeed * 5f;
+
                 break;
 
            
             default:
                 transform.localScale = Vector3.one;
+                mySpeed = baseSpeed;
                 break;
 
         }
