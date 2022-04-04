@@ -7,5 +7,6 @@ public class GameBehaviour : MonoBehaviour
     // singleton class references shortened for ease of use.
     protected static GameManager _GM { get { return GameManager.instance; } }
     protected static TargetManager _TM { get { return TargetManager.instance; } }
-    
+
+    protected static UIManager _UI { get { return UIManager.instance; } }
 }

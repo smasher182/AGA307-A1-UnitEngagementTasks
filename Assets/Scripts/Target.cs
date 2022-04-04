@@ -136,15 +136,28 @@ public class Target : GameBehaviour
         StartCoroutine(MoveRandom(_TM.spawnPoints[Random.Range(0, _TM.spawnPoints.Length)]));
     }
 
-    public void DestroyTarget()
+    public void Hit()
     {
         // health decreases with each damage.
         health -= damage;
         if (health <= 0)
         {
             // target gets destroyed when there is no health left.
-            Destroy(this.gameObject);
+            DestroyTarget();
 
         }
+        else
+            // reports the GameEvents that a target is hit.
+            GameEvents.ReportTargetHit(gameObject);
+    }
+
+    public void DestroyTarget()
+    {
+        // reports the GameEvents that a target is destroyed.
+        GameEvents.ReportTargetDestroyed(gameObject);
+        // stop all the coroutines to ckeck if they are still running when targets are destroyed.
+        StopAllCoroutines();
+        // gets the DestroyTarget from the TargetManager script.
+        _TM.DestroyTarget(this.gameObject);
     }
 }

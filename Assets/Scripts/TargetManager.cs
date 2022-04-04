@@ -10,6 +10,8 @@ public class TargetManager : Singleton<TargetManager>
     public Transform[] spawnPoints;
     // reference to array of available target types in the scene.
     public GameObject[] targetTypes;
+    // reference to list of targets in the scene.
+    public List<GameObject> targets;
 
     void Update()
     {
@@ -33,9 +35,34 @@ public class TargetManager : Singleton<TargetManager>
             GameObject go = Instantiate(targetTypes[rndTarget], spawnPoints[rndSpawn]);
             // adds new target created to the targets list.
 
+            targets.Add(go);
+            Debug.Log("Target count is:" + targets.Count);
+
 
 
         }
 
+    }
+
+    public void DestroyTarget(GameObject _target)
+    {
+        // destroys the target.
+        Destroy(_target);
+        // removes targets from the targets list.
+        targets.Remove(_target);
+        //Debug.Log("Targets remaining is:" + targets.Count);
+    }
+
+    private void OnEnable()
+    {
+        // subscribes to the event call.
+        //calls DestroyTarget function after the GameEvents has happened.
+        GameEvents.OnTargetDestroyed += DestroyTarget;
+    }
+    private void OnDisable()
+    {
+        // unsubscribes to the event call.
+        //calls DestroyTarget function after the GameEvents has happened.
+        GameEvents.OnTargetDestroyed -= DestroyTarget;
     }
 }
