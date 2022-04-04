@@ -1,15 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
-public class GameManager : Singleton<GameManager>
-
+public class UIManager : MonoBehaviour
 {
-    // reference to score.
-    public int score;
-    // reference to max time remaining.
-    public float timeRemaining = 30;
-
+    public TMP_Text timerText;
     void Start()
     {
         
