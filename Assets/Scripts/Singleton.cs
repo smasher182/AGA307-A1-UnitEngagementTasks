@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Singleton <T>:GameBehaviour where T:GameBehaviour
 {
+    public bool dontDestroy;
     private static T instance_;
     public static T instance
     {
@@ -25,8 +26,9 @@ public class Singleton <T>:GameBehaviour where T:GameBehaviour
     { 
         if (instance_ == null )
         {
-            instance_ =this as T;
-            //DontDestroyOnLoad (gameObject );
+            instance_ = this as T;
+            if (dontDestroy)
+                DontDestroyOnLoad(gameObject);
         }
         else
         {

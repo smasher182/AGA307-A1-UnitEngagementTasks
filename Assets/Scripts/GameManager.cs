@@ -80,6 +80,11 @@ public class GameManager : Singleton<GameManager>
                 break;
         }
     }
+    public void ChangeGameState(GameState _gameState)
+    {
+        gameState = _gameState;
+    }
+
     void AddTime()
     {
         // adds 5 seconds to the remaining time.
