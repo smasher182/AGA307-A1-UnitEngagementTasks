@@ -703,6 +703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target (0)
       objectReference: {fileID: 0}
+    - target: {fileID: 8162780214551408369, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
+      propertyPath: m_TagString
+      value: TargetOld
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
 --- !u!1 &264769760
@@ -4005,6 +4009,10 @@ PrefabInstance:
     - target: {fileID: 8162780214551408369, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
       propertyPath: m_Name
       value: Target (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162780214551408369, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
+      propertyPath: m_TagString
+      value: TargetOld
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
@@ -8141,7 +8149,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8162780214551408369, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
+      propertyPath: m_TagString
+      value: TargetOld
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -5139263608053907838, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
 --- !u!43 &571578267
 Mesh:
@@ -15060,6 +15073,7 @@ MonoBehaviour:
   - {fileID: 5964964599065896106, guid: af2516f985d9dea44afc2558c9c44425, type: 3}
   - {fileID: 6144037844637095112, guid: 64b9fc4c833b2664a8de571f528e3b18, type: 3}
   - {fileID: 634722752164549595, guid: 47776239b01caad4db867deddd6f7e77, type: 3}
+  targets: []
 --- !u!4 &1262101627
 Transform:
   m_ObjectHideFlags: 0
@@ -19807,6 +19821,10 @@ PrefabInstance:
     - target: {fileID: 8162780214551408369, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
       propertyPath: m_Name
       value: Target (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162780214551408369, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}
+      propertyPath: m_TagString
+      value: TargetOld
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21a98dfe0d0921f4284fb2d6d8caefd9, type: 3}

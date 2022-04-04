@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -2605966204039230490}
   m_Layer: 0
   m_Name: Target
-  m_TagString: Target
+  m_TagString: TargetOld
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   health: 3
   targetSize: 3
   target: {fileID: 0}
+  mySpeed: 4
 --- !u!114 &-2605966204039230490
 MonoBehaviour:
   m_ObjectHideFlags: 0

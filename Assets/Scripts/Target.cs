@@ -136,15 +136,20 @@ public class Target : MonoBehaviour
         StartCoroutine(MoveRandom(_TM.spawnPoints[Random.Range(0, _TM.spawnPoints.Length)]));
     }
 
-    public void DestroyTarget()
+    public void Hit()
     {
         // health decreases with each damage.
         health -= damage;
         if (health <= 0)
         {
             // target gets destroyed when there is no health left.
-            Destroy(this.gameObject);
+            TargetDestroy();
 
         }
+    }
+    public void TargetDestroy()
+    {
+        // gets the DestroyTarget from the TargetManager script.
+        _TM.DestroyTarget(this.gameObject);
     }
 }
