@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum TargetSize { SMALL, MEDIUM, LARGE }
 
-public class TargetManager : MonoBehaviour
+public class TargetManager : Singleton<TargetManager>
 {
     // reference to array of spawn points in the scene. 
     public Transform[] spawnPoints;

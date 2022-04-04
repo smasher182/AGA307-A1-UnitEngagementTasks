@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Target : MonoBehaviour
+public class Target : GameBehaviour
 {
     // reference to TargetManager script.
-    TargetManager _TM;
+    //TargetManager _TM;
 
     // reference to target's initial health. 
     public int health = 3;
@@ -35,7 +35,7 @@ public class Target : MonoBehaviour
     {
         SetUp();
         // finds the TargetManger script.
-        _TM = FindObjectOfType<TargetManager>();
+        //_TM = FindObjectOfType<TargetManager>();
 
         // removed after adding random move coroutine.
         //StartCoroutine(Move());
